@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+
+    <record id="teacher_action" model="ir.actions.act_window">
+        <field name="name">Student</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">task.teacher</field>
+        <field name="view_mode">tree,kanban,form</field>
+
+
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">Create a new Teacher,</p>
+        </field>
+    </record>
+
+    <menuitem id="task_teacher" name="Teacher" parent="class_root"
+              sequence="10" action="teacher_action"/>
+</data>
+        </odoo>
