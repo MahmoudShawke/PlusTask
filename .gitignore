@@ -24,7 +24,7 @@ addons
 odoo
 doc
 setup.cfg
-debiang
+debian
 
 # generated for windows installer?
 install/win32/*.bat

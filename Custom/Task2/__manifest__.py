@@ -8,7 +8,14 @@
      Task1
     """,
     'data': [
-        'sdasd'
+
+        # 'views/t1_class.xml',
+        # 'views/t1_student.xml',
+        # 'views/t1_teacher.xml',
+        # 'views/sales_inherit.xml',
+        # 'security/security.xml',
+        # 'security/ir.model.access.csv',
+
     ],
 
 }
