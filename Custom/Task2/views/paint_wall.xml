@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="paint_wall_tree" model="ir.ui.view">
+            <field name="name">paint.wall.tree.view</field>
+            <field name="model">task2.wall</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="assigned_painter"/>
+                    <field name="area"/>
+                    <field name="length"/>
+                    <field name="width"/>
+                    <field name="total_cost"/>
+                    <field name="color"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="paint_wall_view" model="ir.ui.view">
+            <field name="name">paint.wall.form.view</field>
+            <field name="model">task2.wall</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="assigned_painter" required="True"/>
+
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="color" groups="base.user_paint_task_edit"/>
+
+                            </group>
+                        </group>
+
+                        <group>
+
+                            <group>
+                                <field name="length"/>
+                                <field name="width"/>
+                            </group>
+
+                            <group>
+                                <field name="area"/>
+                            </group>
+
+                        </group>
+
+
+                        <group>
+                            <group>
+                                <field name="total_cost"/>
+
+
+                            </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="wall_action" model="ir.actions.act_window">
+            <field name="name">Wall</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">task2.wall</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create a new Wall,</p>
+            </field>
+        </record>
+
+        <menuitem id="paint_wall_menu" name="Wall" parent="paint_management_system"
+                  sequence="10" action="wall_action"/>
+    </data>
+</odoo>

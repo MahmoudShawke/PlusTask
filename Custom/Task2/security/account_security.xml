@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+
+        <record id="user_manager_task" model="res.groups">
+            <field name="name">Manager</field>
+
+        </record>
+        <record id="user_paint_task" model="res.groups">
+            <field name="name">Painter</field>
+
+        </record>
+        <record id="user_paint_task_edit" model="res.groups">
+            <field name="name">edit</field>
+
+        </record>
+
+    </data>
+
+</odoo>

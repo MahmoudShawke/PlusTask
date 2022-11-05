@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+
+        <record id="house_search_view" model="ir.ui.view">
+
+            <field name="name">house.search.view</field>
+
+            <field name="model">task2.house</field>
+
+            <field name="arch" type="xml">
+
+                <search string="House">
+
+                    <filter name="group_customer_id" string="Date" icon="terp-partner"
+                            context="{'group_by':'create_date:day'}"/>
+
+
+                </search>
+
+            </field>
+
+        </record>
+
+
+        <record id="paint_house_tree" model="ir.ui.view">
+            <field name="name">paint.house.tree.view</field>
+            <field name="model">task2.house</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="create_date"/>
+
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="paint_house_view" model="ir.ui.view">
+            <field name="name">paint.house.form.view</field>
+            <field name="model">task2.house</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+
+                            </group>
+
+                        </group>
+                        <group>
+                            <group>
+                                <field name="cus_id"/>
+
+                            </group>
+
+                        </group>
+                        <group>
+                            <group>
+                                <field name="Rooms" widget="many2many_tags"/>
+
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="house_action" model="ir.actions.act_window">
+            <field name="name">House</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">task2.house</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create a new Class,</p>
+            </field>
+        </record>
+        <menuitem id="paint_management_system" name="Paint Management System" sequence="10"/>
+        <menuitem id="paint_house_menu" name="House" parent="paint_management_system"
+                  sequence="10" action="house_action"/>
+    </data>
+</odoo>

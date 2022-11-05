@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+room_manager,room.manager,model_task2_room,user_manager_task,1,1,1,1
+wall_manger,wall.manger,model_task2_wall,user_manager_task,1,1,1,1
+house_manager,house.manager,model_task2_house,user_manager_task,1,1,1,1
+color_manager,color.manager,model_task2_color,user_manager_task,1,1,1,1
+room_painter,room.painter,model_task2_room,user_paint_task,1,0,0,0
+house_painter,house.painter,model_task2_house,user_paint_task,1,0,0,0
+color_painter,color.painter,model_task2_color,user_paint_task,1,0,0,0
+wall_painter_edit,wall.painter_edit,model_task2_wall,user_paint_task_edit,0,1,0,0
+wall_painter,wall.painter,model_task2_wall,user_paint_task,1,0,0,0

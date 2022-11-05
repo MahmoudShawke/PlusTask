@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="paint_color_tree" model="ir.ui.view">
+            <field name="name">paint.color.tree.view</field>
+            <field name="model">task2.color</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="unit_cost"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="paint_color_view" model="ir.ui.view">
+            <field name="name">paint.color.form.view</field>
+            <field name="model">task2.color</field>
+            <field name="arch" type="xml">
+                <form>
+
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+
+                            </group>
+
+                        </group>
+                        <group>
+                            <group>
+                                <field name="unit_cost"/>
+
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+        <record id="color_action" model="ir.actions.act_window">
+            <field name="name">Color</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">task2.color</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create a new Color,</p>
+            </field>
+        </record>
+
+        <menuitem id="paint_color_menu" name="Color" parent="paint_management_system"
+                  sequence="10" action="color_action"/>
+    </data>
+</odoo>

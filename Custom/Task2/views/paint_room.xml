@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <data>
+        <record id="paint_room_view" model="ir.ui.view">
+            <field name="name">paint.room.form.view</field>
+            <field name="model">task2.room</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name" required="True"/>
+
+                            </group>
+                            <group>
+
+                               <field name="Walls"/>
+                            </group>
+                            <group>
+                                <field name="number_of_walls"/>
+                                <field name="total_area"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="total_cost"/>
+
+
+                            </group>
+                        </group>
+
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+
+
+        <record id="paint_room_tree" model="ir.ui.view">
+            <field name="name">paint.room.tree.view</field>
+            <field name="model">task2.room</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="Walls"/>
+                    <field name="number_of_walls"/>
+                    <field name="total_area"/>
+                    <field name="total_cost"/>
+                </tree>
+            </field>
+        </record>
+        <record id="room_action" model="ir.actions.act_window">
+            <field name="name">Room</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">task2.room</field>
+            <field name="view_mode">tree,kanban,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create a new Room,</p>
+            </field>
+        </record>
+
+        <menuitem id="paint_room_menu" name="Room" parent="paint_management_system"
+                  sequence="10" action="room_action"/>
+    </data>
+</odoo>

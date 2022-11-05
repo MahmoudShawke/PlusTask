@@ -9,12 +9,12 @@
     """,
     'data': [
 
-        # 'views/t1_class.xml',
-        # 'views/t1_student.xml',
-        # 'views/t1_teacher.xml',
-        # 'views/sales_inherit.xml',
-        # 'security/security.xml',
-        # 'security/ir.model.access.csv',
+        'views/paint_house.xml',
+        'views/paint_room.xml',
+        'views/paint_wall.xml',
+        'views/paint_color.xml',
+        'security/account_security.xml',
+        'security/ir.model.access.csv',
 
     ],
 
